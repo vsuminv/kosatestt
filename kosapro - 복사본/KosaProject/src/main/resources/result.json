@@ -1,0 +1,31 @@
+{
+  "Server_Info": {
+    "SW_TYPE": "MINGW64_NT-10.0-22621",
+    "SW_NM": "CentOS",
+    "SW_INFO": "",
+    "HOST_NM": "DESKTOP-0881EHE",
+    "DATE": "24-08-01",
+    "TIME": "21:48:30",
+    "IP_ADDRESS": "",
+    "UNIQ_ID": "24-08-01_vaPtc2EFGS"
+  },
+  "Check_Results": [
+  {
+    "Item": "U-01",
+    "Importance": "(상)",
+    "Category": "1. 계정관리",
+    "Sub_Category": "1.1 root 계정 원격 접속 제한",
+    "Description": "시스템 정책에 root 계정의 원격 터미널 접속 차단 설정이 적용되어 있는지 점검",
+    "Command": "cat /etc/ssh/sshd_config",
+    "status":"[양호]",
+    "details": [
+      "telnet 및 SSH 서비스가 모두 비활성화되어 있거나, 설정이 적절하게 구성된 상태입니다."
+    ]
+  },
+  {
+    "Item": "U-02",
+    "Importance": "(상)",
+    "Category": "1. 계정관리",
+    "Sub_Category": "1.2 패스워드 복잡성 설정",
+    "Description": "시스템 정책에 사용자 계정(root 및 일반 계정 모두 해당) 패스워드 복잡성 관련 설정이 되어 있는지 점검",
+    "Command": "cat /etc/pam.d/system-auth",
