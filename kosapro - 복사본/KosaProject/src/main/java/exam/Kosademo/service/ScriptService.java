@@ -67,14 +67,15 @@ public class ScriptService {
         System.out.println("Script execution finished with exit code: " + exitCode);
 
         // JSON 파일 경로
-        File jsonFile = new File("output.json");
+        //File jsonFile = new File("output.json");
+        File jsonFile = new File("/root/.ssh/kosatestt/kosapro - 복사본/KosaProject/src/main/resources/result.json");
         if (jsonFile.exists()) {
             System.out.println("JSON file found at: " + jsonFile.getAbsolutePath());
 
             // S3로 JSON 파일 업로드
             s3Client.putObject(PutObjectRequest.builder()
                             .bucket(bucketName)
-                            .key("output.json")
+                            .key("result.json")
                             .build(),
                     jsonFile.toPath());
 
