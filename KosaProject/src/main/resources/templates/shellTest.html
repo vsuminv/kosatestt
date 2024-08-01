@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Script Execution</title>
+</head>
+<body>
+<h1>Run Script</h1>
+<button onclick="runScript()">Execute Script</button>
+
+<script>
+        function runScript() {
+            fetch('/api/execute-script', {
+                method: 'get'
+            })
+            .then(response => response.text())
+            .then(message => alert(message))
+            .catch(error => alert('Error: ' + error));
+        }
+    </script>
+</body>
+</html>
