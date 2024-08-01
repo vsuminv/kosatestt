@@ -48,8 +48,8 @@ public class ScriptService {
         tempScriptFile.setExecutable(true);
 
         // 쉘 스크립트 실행
-//        ProcessBuilder processBuilder = new ProcessBuilder("sh", tempScriptFile.getAbsolutePath());
-        ProcessBuilder processBuilder = new ProcessBuilder("C:\\Program Files\\Git\\bin\\bash.exe", tempScriptFile.getAbsolutePath());
+        ProcessBuilder processBuilder = new ProcessBuilder("sh", tempScriptFile.getAbsolutePath());
+       // ProcessBuilder processBuilder = new ProcessBuilder("C:\\Program Files\\Git\\bin\\bash.exe", tempScriptFile.getAbsolutePath());
 
         processBuilder.redirectErrorStream(true);
         Process process = processBuilder.start();
